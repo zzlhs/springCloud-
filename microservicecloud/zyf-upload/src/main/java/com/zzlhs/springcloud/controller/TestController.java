@@ -29,6 +29,7 @@ public class TestController {
 	
 	@RequestMapping(value = "/html", method = RequestMethod.GET)
 	public String test() {
+		System.out.println("123");
 		return "test";
 	}
 	
