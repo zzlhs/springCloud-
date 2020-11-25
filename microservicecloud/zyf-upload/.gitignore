@@ -1,4 +1,5 @@
 #eclipse files
 .classpath
 .project
+.class
 target
