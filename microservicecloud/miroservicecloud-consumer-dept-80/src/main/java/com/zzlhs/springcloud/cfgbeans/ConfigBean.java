@@ -11,16 +11,16 @@ import com.netflix.loadbalancer.RoundRobinRule;
 
 @Configuration
 public class ConfigBean {
-
+//
 	@Bean
 	@LoadBalanced // ribbon 负载均衡
 	public RestTemplate getRestTemplate() {
 		return new RestTemplate();
 	}
 	
-	@Bean
-	public IRule myRule() {
-//		return new RoundRobinRule();
-		return new RandomRule(); // 随机的访问
-	}
+//	@Bean
+//	public IRule myRule() {
+////		return new RoundRobinRule();
+//		return new RandomRule(); // 随机的访问
+//	} 
 }

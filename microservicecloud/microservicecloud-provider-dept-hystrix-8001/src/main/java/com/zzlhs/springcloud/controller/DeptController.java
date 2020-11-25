@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.zzlhs.springcloud.entities.Dept;
 import com.zzlhs.springcloud.service.DeptService;
 
@@ -25,6 +26,7 @@ public class DeptController {
 	}
 	
 	@RequestMapping(value="/dept/get/{id}",method=RequestMethod.GET)
+//	@HystrixCommand(defaultFallback = "")
 	public Dept get(@PathVariable("id") Long id) {
 		return deptService.get(id);
 	}

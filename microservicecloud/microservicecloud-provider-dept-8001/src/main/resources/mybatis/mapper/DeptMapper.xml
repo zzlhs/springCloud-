@@ -11,7 +11,7 @@
  
 	<!-- 通过id查询一个用户 -->
 	<select id="findById" parameterType="Long" resultType="com.zzlhs.springcloud.entities.Dept">
-		select * from dept where deptno=#{deptno};
+		select * from dept where deptnc=#{id};
 	</select>
 	
 	<select id="findAll" resultType="com.zzlhs.springcloud.entities.Dept">

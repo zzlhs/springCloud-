@@ -15,7 +15,8 @@ import com.zzlhs.springcloud.entities.Dept;
 public class DeptController_Consumer {
 	
 //	private static final String REST_URL_PREFIX = "http://localhost:8001";
-	private static final String REST_URL_PREFIX = "http://mucroservicecloud-dept";
+	private static final String REST_URL_PREFIX = "http://microservicecloud-dept";
+//														  microservicecloud-dept
 	
 	@Autowired
 	private RestTemplate restTemplate;
@@ -31,6 +32,7 @@ public class DeptController_Consumer {
 		return this.restTemplate.getForObject(REST_URL_PREFIX + "/dept/get/" + id, Dept.class);
 	}
 	
+	@SuppressWarnings("unchecked")
 	@RequestMapping(value="/consumer/dept/list")
 	public List<Dept> list(){
 		return this.restTemplate.getForObject(REST_URL_PREFIX + "/dept/list", List.class);

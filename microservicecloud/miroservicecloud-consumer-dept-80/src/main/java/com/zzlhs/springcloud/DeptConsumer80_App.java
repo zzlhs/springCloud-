@@ -9,7 +9,7 @@ import com.zzlhs.myrule.MySelfRule;
 
 @SpringBootApplication
 @EnableEurekaClient
-@RibbonClient(name="microservicecloud-dept", configuration=MySelfRule.class)
+//@RibbonClient(name="microservicecloud-dept", configuration=MySelfRule.class)
 public class DeptConsumer80_App {
 	
 	public static void main(String[] args) {
