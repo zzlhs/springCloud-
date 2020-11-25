@@ -29,7 +29,7 @@ public class TestController {
 	
 	@RequestMapping(value = "/html", method = RequestMethod.GET)
 	public String test() {
-		System.out.println("123456789");
+		System.out.println("123456789012");
 		return "test";
 	}
 	
